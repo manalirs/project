@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="progressbar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iqL-a0-xHG">
+                                <rect key="frame" x="65" y="321" width="269" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="7XA-fl-05v"/>
+                                    <constraint firstAttribute="width" constant="269" id="kXL-7P-KF6"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eoy-jT-2iW">
+                                <rect key="frame" x="63" y="172" width="250" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="uYv-BA-L80"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Download">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startcount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqI-mB-QIG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LO7-2u-cf7">
+                                <rect key="frame" x="119" y="194" width="25" height="4.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="gQJ-gk-lpb">
+                                <rect key="frame" x="57" y="251" width="291" height="126"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Eoy-jT-2iW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152" id="1OB-5R-igH"/>
+                            <constraint firstItem="LO7-2u-cf7" firstAttribute="top" secondItem="Eoy-jT-2iW" secondAttribute="bottom" constant="-17" id="IVJ-uI-NbN"/>
+                            <constraint firstItem="gQJ-gk-lpb" firstAttribute="top" secondItem="iqL-a0-xHG" secondAttribute="top" constant="-70" id="IoL-Jp-ENq"/>
+                            <constraint firstItem="gQJ-gk-lpb" firstAttribute="trailing" secondItem="iqL-a0-xHG" secondAttribute="trailing" constant="14" id="KEg-PU-CVC"/>
+                            <constraint firstItem="iqL-a0-xHG" firstAttribute="centerX" secondItem="Eoy-jT-2iW" secondAttribute="centerX" constant="11.5" id="UtB-BH-m26"/>
+                            <constraint firstItem="gQJ-gk-lpb" firstAttribute="bottom" secondItem="iqL-a0-xHG" secondAttribute="bottom" constant="46" id="Xbx-eS-VnK"/>
+                            <constraint firstItem="iqL-a0-xHG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="49" id="YnJ-AV-u4h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iqL-a0-xHG" secondAttribute="bottom" constant="336" id="ih3-LK-RmL"/>
+                            <constraint firstItem="gQJ-gk-lpb" firstAttribute="leading" secondItem="iqL-a0-xHG" secondAttribute="leading" constant="-8" id="j9f-dn-jQ4"/>
+                            <constraint firstItem="iqL-a0-xHG" firstAttribute="top" secondItem="LO7-2u-cf7" secondAttribute="bottom" constant="122.5" id="mW2-Aj-bDw"/>
+                            <constraint firstItem="LO7-2u-cf7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="ob7-o9-C7b"/>
+                            <constraint firstItem="LO7-2u-cf7" firstAttribute="top" secondItem="Eoy-jT-2iW" secondAttribute="bottom" constant="-17" id="pA8-aK-fca"/>
+                            <constraint firstItem="Eoy-jT-2iW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152" id="pwI-vS-nbX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="download" destination="Eoy-jT-2iW" id="2up-ca-X9q"/>
+                        <outlet property="imageview" destination="gQJ-gk-lpb" id="H1E-LP-zPS"/>
+                        <outlet property="progressView" destination="iqL-a0-xHG" id="4Yb-HE-scL"/>
+                        <outlet property="progresslabel" destination="LO7-2u-cf7" id="O6V-gv-QDw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="images" width="225" height="225"/>
+    </resources>
+</document>
